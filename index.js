@@ -1,5 +1,5 @@
 window.addEventListener('load',function(){
-  setTimeout(firstLoad,7000)
+  setTimeout(firstLoad,1000)
  document.getElementById("home").style.removeProperty("display")
   document.getElementById("body").style.backgroundColor="black"
   document.getElementById("montlyCartoonDiv-btn").style.removeProperty("display")
@@ -22,7 +22,7 @@ if(window.location.search.includes('runFunction=true')){
   div.classList.add('hidden');
   setTimeout(function transition() {
     div.style.display = 'none';
-  }, 3000); // 2000ms = 2s
+  }, 1000);
 }
 function playEnaivocDescriptionVideo(){
   document.getElementById("enaivocDescription-video").style.visibility="visible"
@@ -78,7 +78,7 @@ function Home(){
   div.style.display = 'block'; // or the original display value
   setTimeout(function() {
     div.classList.remove('hidden');
-  }, 10); // small delay to ensure display is set before transitioning
+  }, 2); // small delay to ensure display is set before transitioning
   document.getElementById("body").style.backgroundColor="black"
   document.getElementById("montlyCartoonDiv-btn").style.removeProperty("display")
   document.getElementById("enaivocDescriptionDiv-btn").style.removeProperty("display")
