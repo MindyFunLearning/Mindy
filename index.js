@@ -1,5 +1,5 @@
 window.addEventListener('load',function(){
-  setTimeout(firstLoad,1000)
+  document.getElementById("home-btn").style.display="none"
  document.getElementById("home").style.removeProperty("display")
   document.getElementById("body").style.backgroundColor="black"
   document.getElementById("montlyCartoonDiv-btn").style.removeProperty("display")
@@ -11,9 +11,6 @@ window.addEventListener('load',function(){
 document.addEventListener('DOMContentLoaded', function() {
   document.body.classList.add('loaded');
 });
-function firstLoad(){
-  document.getElementById("home-btn").style.display="none"
-}
 if(window.location.search.includes('runFunction=true')){
    lessonMenu();
 }
@@ -22,14 +19,14 @@ if(window.location.search.includes('runFunction=true')){
   div.classList.add('hidden');
   setTimeout(function transition() {
     div.style.display = 'none';
-  }, 1000);
+  }, 500);
 }
 function playEnaivocDescriptionVideo(){
   document.getElementById("enaivocDescription-video").style.visibility="visible"
   document.getElementById("montlyCartoon-videoDiv").style.display="none"
   setTimeout(()=>{
     document.getElementById("home-btn").style.display="block";
-  },1000)
+  },500)
   
   document.getElementById("montlyCartoonDiv-btn").style.visibility="visible"
   document.getElementById("montlyCartoonDiv-btn").style.removeProperty("display")
@@ -45,7 +42,7 @@ function playMontlyCartoonVideo(){
   document.getElementById("enaivocDescription-videoDiv").style.display="none"
   setTimeout(()=>{
     document.getElementById("home-btn").style.display="block";
-  },1000)
+  },500)
   document.getElementById("enaivocDescriptionDiv-btn").style.visibility="visible"
   document.getElementById("enaivocDescriptionDiv-btn").style.removeProperty("display")
   document.getElementById("home").style.display="none"
@@ -78,7 +75,7 @@ function Home(){
   div.style.display = 'block'; // or the original display value
   setTimeout(function() {
     div.classList.remove('hidden');
-  }, 2); // small delay to ensure display is set before transitioning
+  }, .1); // small delay to ensure display is set before transitioning
   document.getElementById("body").style.backgroundColor="black"
   document.getElementById("montlyCartoonDiv-btn").style.removeProperty("display")
   document.getElementById("enaivocDescriptionDiv-btn").style.removeProperty("display")
